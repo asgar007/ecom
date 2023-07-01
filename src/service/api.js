@@ -23,7 +23,11 @@ export const getProducts = async () => {
 }
 
 export const addProduct = async (product) => {
-    return await axios.post(`${usersUrl}`, product);
+    try {
+        return await axios.post(`${usersUrl}`, product);
+    } catch (error) {
+        console.log('Error while calling addProduct api ', error);
+    }
 }
 
 // export const deleteUser = async (id) => {

@@ -25,6 +25,7 @@ const Edit = () => {
 
   const editProductDetails = async() => {
     const response = await editProduct(product.id, item);
+    alert("Item Updated Successfully!!!");
     // navigate('/all');
   }
 

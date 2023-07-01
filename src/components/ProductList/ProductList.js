@@ -29,7 +29,6 @@ const ProductList = ({products, status}) => {
     const viewEditModalHandler = (data) => {
         dispatch(setModalData(data));
         dispatch(setIsEditModalVisible(true));
-        alert("Item Updated Successfully!!!");
     }
 
     /* ADD A Product */

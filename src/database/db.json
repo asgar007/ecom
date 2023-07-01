@@ -997,6 +997,13 @@
         "creationAt": "2023-06-30T00:11:15.000Z",
         "updatedAt": "2023-06-30T00:11:15.000Z"
       }
+    },
+    {
+      "title": "keyboard",
+      "price": "500",
+      "description": "ajsfaishfoiaifiqifjioaenfoinweoi",
+      "images": "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/k120/gallery/k120-gallery-01-new.png",
+      "id": 73
     }
   ]
 }

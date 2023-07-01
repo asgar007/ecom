@@ -26,6 +26,10 @@ const Navbar = () => {
                 <span className = "text-regal-blue">Sale</span><span className='text-gold'> Point.</span>
               </Link>
 
+              <Link to = "/add" className = "navbar-brand">
+                <span className = "text-regal-blue">Add Product</span>
+              </Link>
+
               <form className = "navbar-search flex">
                 <input type = "text" placeholder='Search here ...' />
                 <button type = "submit" className = "navbar-search-btn" >

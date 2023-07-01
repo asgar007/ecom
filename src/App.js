@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from "./components/Footer/Footer";
 import {Provider} from 'react-redux';
 import store from "./store/store";
+import Add from './components/AddModal/Add';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path = "/" element = {<Home />} />
             <Route path = "/category/:id" element = {<Category />} />
             <Route path = "/cart" element = {<Cart />} />
+            <Route path='/add' element = { <Add />} />
           </Routes>
           <Footer />
         </BrowserRouter>
