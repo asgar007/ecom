@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# E-commerce React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based e-commerce application that allows users to browse products, add them to the cart, and perform various actions such as editing and deleting products. The app integrates with a dummy e-commerce API service and utilizes Redux for state management.
 
-## Available Scripts
+## Instructions
 
-In the project directory, you can run:
+To set up the app locally, follow these steps:
 
-### `npm start`
+1. Clone the repository.
+2. Install the required dependencies using `npm install`.
+3. Use the provided dummy e-commerce API service ([my-json-server](https://my-json-server.typicode.com/)) to create a good amount of data.
+4. Update the API endpoints in the app's configuration file to match the endpoints provided by the API service.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Functionality
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The app offers the following features:
 
-### `npm test`
+### Navbar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Displays the count of items in the cart.
+- Shows relevant navigation links.
 
-### `npm run build`
+### All Products Page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Lists all the products fetched from the API service.
+- Allows users to edit each product by clicking the "pencil" button.
+- Implements inline editing for each product.
+- Shows an alert/notification upon finishing editing a product.
+- Enables product deletion with a delete button, accompanied by an alert/notification.
+- Implements sorting functionality with a sort button to sort products by price.
+- Displays a cross button next to the sorted view, allowing users to remove the sorting.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Create Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Presents a form for adding a product to the database.
+- Shows an alert/notification after successfully adding the product.
 
-### `npm run eject`
+### Product Detail Page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Displays all the details of a selected product.
+- Provides a button to add the product to the cart.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Cart Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Lists all the items in the cart.
+- Allows users to remove items from the cart.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Error Handling
 
-## Learn More
+- Handles errors that occur during API requests.
+- Displays appropriate alerts/notifications to inform users of any errors.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Redux Integration
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Utilizes Redux for managing the application state.
+- Sets up the Redux store with the necessary reducers, actions, and middleware.
 
-### Code Splitting
+### Bonus Feature: Persistent Cart Items
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Implements persistence for the cart items using local storage.
+- Ensures that the cart items remain intact even after a page refresh.
 
-### Analyzing the Bundle Size
+## Styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The app is designed to resemble a modern e-commerce website. It utilizes CSS styles and can be further customized to fit your desired aesthetic. You may also consider using popular UI libraries such as Bootstrap or Material-UI to enhance the app's visual appeal.
 
-### Making a Progressive Web App
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Run the app locally using `npm start`.
+2. Access the app in your browser at `http://localhost:3000`.
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, please feel free to submit a pull request.
+---
 
-### Deployment
+Thank you for using our e-commerce React app! We hope you find it useful and enjoy the development process. Should you have any questions or need assistance, please don't hesitate to reach out.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy coding!
