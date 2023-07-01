@@ -78,6 +78,7 @@ input, textarea, select{
 .flex{
     display: flex;
     align-items: center;
+    flex-direction: row;
 
     &-column{ flex-direction: column;}
     &-center{ justify-content: center;}

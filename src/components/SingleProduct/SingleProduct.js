@@ -40,6 +40,7 @@ const SingleProduct = () => {
     dispatch(addToCart(tempProduct));
     dispatch(setIsModalVisible(false));
     navigate('/cart');
+    alert("Items Added to Cart!!!");
   };
 
   const modalOverlayHandler = (e) => {

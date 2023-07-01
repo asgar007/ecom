@@ -4,7 +4,9 @@ const modalSlice = createSlice({
     name: "modal",
     initialState: {
         data: [],
-        isModalVisible: false
+        isModalVisible: false,
+        isEditModalVisible: false,
+        isAddModalVisible: false
     },
     reducers: {
         setModalData(state, action){
@@ -12,10 +14,16 @@ const modalSlice = createSlice({
         },
         setIsModalVisible(state, action){
             state.isModalVisible = action.payload;
+        },
+        setIsEditModalVisible(state, action){
+            state.isEditModalVisible = action.payload
+        },
+        setIsAddModalVisible(state, action){
+            state.isAddModalVisible = action.payload
         }
     }
 });
 
-export const { setModalData, setIsModalVisible} = modalSlice.actions;
+export const { setModalData, setIsModalVisible, setIsEditModalVisible, setIsAddModalVisible} = modalSlice.actions;
 export default modalSlice.reducer;
 

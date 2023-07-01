@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { STATUS } from "../../utils/status";
 import "./Category.scss";
 import {Link} from "react-router-dom";
 import Error from '../Error/Error';
 import Loader from '../Loader/Loader';
+import { getProducts } from '../../service/api';
+
+
 
 const Category = ({categories, status}) => {
+    const [products, setProducts] = useState([]);
+    useEffect(()=>{
+        getAllProducts();
+    },[])
+
+    const getAllProducts = async()=>{
+        const items = await getProducts();
+        setProducts(items.data);
+    }
+
     if(status === STATUS.ERROR) return (<Error />);
     if(status === STATUS.LOADING) return (<Loader />);
 
@@ -18,17 +31,17 @@ const Category = ({categories, status}) => {
                 </div>
                 <div className = "category-items grid">
                     {
-                        categories.slice(0, 5).map(category => (
-                            <Link to = {`category/${category.id}`} key = {category.id}>
+                        products.slice(0, 5).map(product => (
+                            // <Link to = {`category/${category.id}`} key = {category.id}>
                                 <div className = "category-item" >
                                     <div className='category-item-img'>
-                                        <img src = {category.image} alt = "" />
+                                        <img src = {product.category.image} alt = "" />
                                     </div>
                                     <div className = "category-item-name text-center">
-                                        <h6 className='fs-20'>{category.name}</h6>
+                                        <h6 className='fs-20'>{product.category.name}</h6>
                                     </div>
                                 </div>
-                            </Link>
+                            // </Link>
                         ))
                     }
                     

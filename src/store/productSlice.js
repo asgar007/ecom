@@ -2,26 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 import { BASE_URL } from "../utils/apiURL";
 import { STATUS } from "../utils/status";
 
-const productSlice = createSlice({
-    name: "product",
-    initialState: {
-        data: [],
-        status: STATUS.IDLE,
-    },
-
-    reducers: {
-        setProducts(state, action){
-            state.data = action.payload;
-        },
-        setStatus(state, action){
-            state.status = action.payload;
-        },
-    },
-});
-
-export const {setProducts, setStatus} = productSlice.actions;
-export default productSlice.reducer;
-
 export const fetchProducts = () => {
     return async function fetchProductThunk(dispatch){
         dispatch(setStatus(STATUS.LOADING));
@@ -35,3 +15,31 @@ export const fetchProducts = () => {
         }
     }
 }
+
+const productSlice = createSlice({
+    name: "product",
+    initialState: {
+        data: [],
+        status: STATUS.IDLE,
+    },
+
+    reducers: {
+        setProducts(state, action){
+            state.data = action.payload;
+            // console.log(state.data[0])
+        },
+        setStatus(state, action){
+            state.status = action.payload;
+        },
+        deleteProduct(state, action){
+            // state.data = action.payload;
+            const newItems = state.data.filter((product)=> product.id != action.payload);
+            state.data = newItems;
+        }
+    },
+});
+
+export const {setProducts, setStatus, deleteProduct} = productSlice.actions;
+export default productSlice.reducer;
+
+

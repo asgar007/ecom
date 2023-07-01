@@ -28,7 +28,7 @@ const Navbar = () => {
 
               <form className = "navbar-search flex">
                 <input type = "text" placeholder='Search here ...' />
-                <button type = "submit" className = "navbar-search-btn">
+                <button type = "submit" className = "navbar-search-btn" >
                   <i className = "fas fa-search"></i>
                 </button>
               </form>

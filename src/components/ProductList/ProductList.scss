@@ -25,6 +25,31 @@
                 padding-left: 8px;
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             }
+            // for crud buttons
+            .product-item-button1{
+                position: absolute;
+                top: 8px;
+                border-radius: 8px;
+                padding-right: 8px;
+                padding-left: 8px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+            .product-item-button2{
+                position: absolute;
+                top: 50px;
+                border-radius: 8px;
+                padding-right: 8px;
+                padding-left: 8px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+            .product-item-button3{
+                position: absolute;
+                top: 80px;
+                border-radius: 8px;
+                padding-right: 8px;
+                padding-left: 8px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
         }
 
         &-title{
@@ -57,3 +82,51 @@
             column-gap: 20px;
     }
 }
+
+/* Style for the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Style for the dropdown button */
+  .dropbtn {
+    background-color: #7e80f3;
+    color: #333;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style for the dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Style for the dropdown links */
+  .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Style for the dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown content when hovering or focusing on the dropdown button */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:focus .dropdown-content {
+    display: block;
+  }
