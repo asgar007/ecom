@@ -62,7 +62,7 @@ The app offers the following features:
 
 ## Styling
 
-The app is designed to resemble a modern e-commerce website. It utilizes CSS styles and can be further customized to fit your desired aesthetic. You may also consider using popular UI libraries such as Bootstrap or Material-UI to enhance the app's visual appeal.
+The app is designed to resemble a modern e-commerce website. It utilizes SCSS styles and can be further customized to fit your desired aesthetic. You may also consider using popular UI libraries such as Bootstrap or Material-UI to enhance the app's visual appeal.
 
 ## Usage
 
